@@ -9,7 +9,7 @@ import Domini.Carcassa;
 public class CarcassaBBDD {
 
 	private ConnexioBBDD connexio;
-
+	
 	public CarcassaBBDD() throws Exception {
 		this.connexio = this.connexio.getConnexioBBDD();
 	}
@@ -32,7 +32,7 @@ public class CarcassaBBDD {
 			throw new Exception("Error ocuparCarcassa - " + e.getMessage());
 		}
 	}
-
+	
 	//Mètode que donada una id crea una nova carcassa amb la seva informació recuperada de la BBDD
 	public Carcassa recuperarCarcassa(int id) throws Exception {
 		PreparedStatement pst = connexio
@@ -40,7 +40,6 @@ public class CarcassaBBDD {
 		pst.clearParameters();
 		pst.setInt(1, id);
 		ResultSet rs;
-//		ocuparCarcassa(id, true);
 		rs = pst.executeQuery();
 		if (rs.next()) {
 			return new Carcassa(id, rs.getString("estatCarcassa"),
