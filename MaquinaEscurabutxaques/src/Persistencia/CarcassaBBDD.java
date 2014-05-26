@@ -33,6 +33,7 @@ public class CarcassaBBDD {
 		}
 	}
 	
+	//prova
 	//Mètode que donada una id crea una nova carcassa amb la seva informació recuperada de la BBDD
 	public Carcassa recuperarCarcassa(int id) throws Exception {
 		PreparedStatement pst = connexio
