@@ -9,7 +9,7 @@ import Persistencia.ContracteBBDD;
 import Persistencia.ComercBBDD;
 import Persistencia.LineaContracteBBDD;
 import Persistencia.MaquinaBBDD;
-
+//COMENTARIO JONNHY
 public class ControladorContracte {
 
 	private Contracte contracte;
@@ -72,7 +72,7 @@ public class ControladorContracte {
 		try{
 			Contracte contracte = new Contracte(info,new Date());//No se agafar la data. 
 			//capa persistencia te sql date, tots els altres util date, cuan la persistencia reb una data rep un sql date,
-			//el transforma en un long(Amb un mètode propi que te). El util date el canvies a sql amb el preparedStatement.getDate(utildate)
+			//el transforma en un long(Amb un m��tode propi que te). El util date el canvies a sql amb el preparedStatement.getDate(utildate)
 			//
 			//
 			contracteBBDD.inserirContracte(idComerc, contracte);
